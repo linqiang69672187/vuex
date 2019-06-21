@@ -9,12 +9,19 @@ const getters ={
 }
 const mutations ={
     [INCREASE](state,data){
-        state.points = data
+        state.points += data
+    }
+}
+
+const actions={
+    [INCREASE](context,data){
+        context.commit(INCREASE,data) //提交mutation
     }
 }
 
 export default{
     state,
     mutations,
-    getters
+    getters,
+    actions
 }
