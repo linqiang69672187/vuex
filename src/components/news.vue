@@ -2,6 +2,7 @@
     <div>Hello vue{{news}},{{points}}
         <Button type="button" @click="increase(5)"  >点击</Button><Button  type="primary">dbc</Button>
         <Table width="550" border :columns="columns2" :data="data3"></Table>
+        <div id="main"></div>
     </div>
 
 </template>
@@ -9,6 +10,8 @@
 import store from "@/vuex/store"
 import {INCREASE} from '@/vuex/modul_types'
 import { Button, Table } from 'iview';
+
+
 
 export default {
     data(){
@@ -105,6 +108,10 @@ export default {
                     }
                 ],
        }
+    }
+    ,
+    mounted() {
+        this.$chart.line1('main');
     },
     computed:{
         points:function(){
@@ -115,7 +122,7 @@ export default {
     },
     components:{
         Button,
-        Table
+        Table,
     },
     methods:{
         increase:function(val){
@@ -124,3 +131,9 @@ export default {
     }
 }
 </script>
+<style scoped>
+  #main {
+    width: 300px;
+    height: 300px;
+  }
+</style>
