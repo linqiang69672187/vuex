@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import News from '@/components/news'
 
+
 Vue.use(Router)
 
 export default new Router({
@@ -16,6 +17,6 @@ export default new Router({
       path: '/news',
       name: 'news',
       component: News
-    },
+    }
   ]
 })

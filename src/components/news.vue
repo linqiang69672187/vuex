@@ -1,8 +1,9 @@
 <template>
     <div>Hello vue{{news}},{{points}}
-        <Button type="button" @click="increase(5)"  >点击</Button><Button  type="primary">dbc</Button>
+        <Button  @click="increase(5)"  >点击</Button><Button  type="primary">dbc</Button>
         <Table width="550" border :columns="columns2" :data="data3"></Table>
         <div id="main"></div>
+        <Map></Map>
     </div>
 
 </template>
@@ -10,7 +11,7 @@
 import store from "@/vuex/store"
 import {INCREASE} from '@/vuex/modul_types'
 import { Button, Table } from 'iview';
-
+import Map from "@/components/map.vue"
 
 
 export default {
@@ -28,7 +29,8 @@ export default {
                     {
                         title: 'Age',
                         key: 'age',
-                        width: 100
+                        width: 100,
+                         fixed: 'left'
                     },
                     {
                         title: 'Province',
@@ -123,6 +125,7 @@ export default {
     components:{
         Button,
         Table,
+        Map
     },
     methods:{
         increase:function(val){
