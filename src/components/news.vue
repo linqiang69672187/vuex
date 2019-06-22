@@ -1,12 +1,13 @@
 <template>
     <div>Hello vue{{news}},{{points}}
-        <input type="button" @click="increase(5)" value="点击" ></button>
+        <Button type="button" @click="increase(5)"  >点击</Button><Button  type="primary">dbc</Button>
     </div>
 
 </template>
 <script>
 import store from "@/vuex/store"
 import {INCREASE} from '@/vuex/modul_types'
+import { Button, Table } from 'iview';
 
 export default {
     data(){
@@ -21,6 +22,10 @@ export default {
         }
             
         
+    },
+    components:{
+        Button,
+        Table
     },
     methods:{
         increase:function(val){
