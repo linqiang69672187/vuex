@@ -1,6 +1,6 @@
 <template>
     <div>Hello vue{{news}},{{points}}
-        <Button  @click="increase(5)"  >点击</Button><Button  type="primary">dbc</Button>
+        <Button  @click="increase(5)"  >点击{{say_hi('lq')}}</Button><Button  type="primary">dbc{{myname()}}</Button>
         <Table width="550" border :columns="columns2" :data="data3"></Table>
         <div id="main"></div>
         <Map></Map>
@@ -12,7 +12,8 @@ import store from "@/vuex/store"
 import {INCREASE} from '@/vuex/modul_types'
 import { Button, Table } from 'iview';
 import Map from "@/components/map.vue"
-
+import conmonjs from "@/mixin/common_hi"
+import annother from "@/mixin/annother"
 
 export default {
     data(){
@@ -110,7 +111,8 @@ export default {
                     }
                 ],
        }
-    }
+    },
+    mixins:[conmonjs,annother]
     ,
     mounted() {
         this.$chart.line1('main');
