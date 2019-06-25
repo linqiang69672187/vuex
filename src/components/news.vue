@@ -1,6 +1,6 @@
 <template>
     <div>Hello vue{{news}},{{points}}
-        <Button  @click="increase(5)"  >点击{{say_hi('lq')}}</Button><Button  type="primary">dbc{{myname()}}</Button>
+        <Button  @click="increase(5)"  >点击{{say_hi('lq')}}</Button><Button  type="primary">dbc{{say_hi()}}</Button><Button  type="success">dbc{{myname2()}}</Button>
         <Table width="550" border :columns="columns2" :data="data3"></Table>
         <div id="main"></div>
         <Map></Map>
