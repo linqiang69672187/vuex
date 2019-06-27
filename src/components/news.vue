@@ -2,6 +2,7 @@
     <div>Hello vue{{news}},{{points}}
         <Button  @click="increase(5)"  >点击{{say_hi('lq')}}</Button><Button  type="primary">dbc{{say_hi()}}</Button><Button  type="success">dbc{{myname2()}}</Button>
         <Table width="550" border :columns="columns2" :data="data3"></Table>
+        <QRCode></QRCode>
         <div id="main"></div>
         <Map></Map>
     </div>
@@ -14,6 +15,7 @@ import { Button, Table } from 'iview';
 import Map from "@/components/map.vue"
 import conmonjs from "@/mixin/common_hi"
 import annother from "@/mixin/annother"
+import QRCode from "@/components/QRCode.vue"
 
 export default {
     data(){
@@ -127,7 +129,8 @@ export default {
     components:{
         Button,
         Table,
-        Map
+        Map,
+        QRCode
     },
     methods:{
         increase:function(val){

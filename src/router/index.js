@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import News from '@/components/news'
 import Map from '@/components/map'
+import QRCode from '@/components/QRCode'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/map',
       name: 'map',
       component: Map
+    },
+    {
+      path: '/qrcode',
+      name: 'qrcode',
+      component: QRCode
     },
   ]
 })
