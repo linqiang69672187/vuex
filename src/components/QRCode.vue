@@ -22,7 +22,7 @@ export default {
                 if(error){
                     console.error(error)
                 }else{
-                    console.log("success!")
+                    console.info("success!")
                 }
             })
         }
